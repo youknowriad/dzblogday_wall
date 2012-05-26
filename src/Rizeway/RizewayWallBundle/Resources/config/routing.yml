@@ -1,0 +1,10 @@
+_welcome:
+    pattern:  /
+    defaults: { _controller: RizewayWallBundle:Element:list }
+wall_show:
+    pattern:  /wall/show
+    defaults: { _controller: RizewayWallBundle:Element:list }
+
+wall_add:
+    pattern:  /wall/add
+    defaults: { _controller: RizewayWallBundle:Element:add }

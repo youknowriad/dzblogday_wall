@@ -1,0 +1,27 @@
+Rizeway\RizewayWallBundle\Entity\Element:
+  type: entity
+  table: element
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    email:
+      type: string
+      length: 150
+    title:
+      type: string
+      length: 30
+    description:
+      type: string
+      length: 255
+    photo:
+      type: string
+      length: 150
+      nullable: true
+    link:
+      type: string
+      length: 150
+    approved:
+      type: boolean

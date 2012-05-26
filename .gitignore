@@ -1,0 +1,11 @@
+# OS generated Files #
+######################
+.DS_Store
+
+# Eclipse generated Files #
+###########################
+.buildpath
+.project
+.settings/
+.idea/
+

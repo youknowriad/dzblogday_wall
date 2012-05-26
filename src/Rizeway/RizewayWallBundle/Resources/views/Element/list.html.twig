@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    {% include "RizewayWallBundle:Element:flash_message.html.twig" %}
+
+    {{ grid|raw }}
+
+    <script>
+        jQuery(function($){
+            $('.element').mosaic({
+                animation	:	'slide',	//fade or slide
+                hover_x		:	'{{width}}px'		//Horizontal position on hover
+            });
+        });
+    </script>
+{% endblock %}

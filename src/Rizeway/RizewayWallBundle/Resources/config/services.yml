@@ -1,0 +1,7 @@
+parameters:
+#    rizeway_wall.example.class: Rizeway\RizewayWallBundle\Example
+
+services:
+#    rizeway_wall.example:
+#        class: %rizeway_wall.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

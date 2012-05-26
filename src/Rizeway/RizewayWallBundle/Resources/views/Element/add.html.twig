@@ -1,0 +1,57 @@
+<div id="add-post-panel-content">
+    <h1>Proposer votre article :</h1>
+
+    <p>Afin de constuire un mur de tous les participants au DZBlogDay, proposer votre article en ajoutant votre photo de préférence, sinon une photo qui représente votre article. La taille de la photo est idéalement de 250px x 250px.</p>
+    
+    <form class="form" action="{{ path('wall_add') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_errors(form) }}
+
+        <fieldset>
+            <div class="field">
+                <div class="error">
+                    {{ form_errors(form.title) }}
+                </div>
+                {{ form_label(form.title, 'Titre') }}
+                {{ form_widget(form.title) }}
+            </div>
+
+            <div class="field">
+                <div class="error">
+                    {{ form_errors(form.description) }}
+                </div>
+                {{ form_label(form.description, 'Description') }}
+                {{ form_widget(form.description) }}
+            </div>
+
+            <div class="field">
+                <div class="error">
+                    {{ form_errors(form.photo) }}
+                </div>
+                {{ form_label(form.photo, 'Photo') }}
+                {{ form_widget(form.photo) }}
+            </div>
+
+            <div class="field">
+                <div class="error">
+                    {{ form_errors(form.link) }}
+                </div>
+                {{ form_label(form.link, 'Lien') }}
+                {{ form_widget(form.link) }}
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div class="field">
+                <div class="error">
+                    {{ form_errors(form.email) }}
+                </div>
+                {{ form_label(form.email, 'Email') }}
+                {{ form_widget(form.email) }}
+            </div>
+        </fieldset>
+
+        {{ form_rest(form) }}
+
+        <button class="button" >Proposer</button>
+    </form>
+</div>

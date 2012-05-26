@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DZBlogDay 2012, The Wall by Rizeway</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        <script src="{{ asset('js/jquery-1.7.1.min.js') }}" ></script>
+        <script src="{{ asset('js/mosaic.1.0.1.min.js') }}" ></script>
+        <script src="{{ asset('fancybox/jquery.mousewheel-3.0.4.pack.js') }}"></script>
+        <script src="{{ asset('fancybox/jquery.fancybox-1.3.4.pack.js') }}"></script>
+        <script src="{{ asset('js/rizeway/utils/AjaxForm.js') }}"></script>
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/wall.css') }}" />
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('fancybox/jquery.fancybox-1.3.4.css') }}" />
+
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-788479-13']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+    </head>
+    <body>
+
+        <div id="header">
+            <div class="center">
+                <a href="{{ path('_welcome') }}"><img id="logo" src="{{ asset('images/logo.png') }}" alt="DZBlogDay : The Wall" /></a>
+                <a href="http://rizeway.com"><img id="byRizeway" src="{{ asset('images/rizeway.png') }}" alt="by rizeway" /></a>
+                <a id="add-post-link" href="{{ path('wall_add') }}"><img id="ruban" src="{{ asset('images/ruban.png') }}" alt="Proposer votre article" /></a>
+
+                <div id="add-post-panel">
+                    {% render 'RizewayWallBundle:Element:add' %}
+                </div>
+
+                <script>
+                    $(document).ready(function() {
+                        $("a#add-post-link").fancybox({
+                            'autoDimensions'    : false,
+                            'width'             : 400,
+                            'height'            : 'auto'
+                        });
+                    });
+                </script>
+
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="center">
+                <div id ="contenu">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

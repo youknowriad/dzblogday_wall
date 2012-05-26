@@ -1,0 +1,11 @@
+<div class="mosaic-block element" style="width: {{width}}px; height: {{width}}px;">
+        <a href="{{ element.link }}" target="_blank" class="mosaic-backdrop">
+                <div class="details">
+                        <h4>{{ element.title }}</h4>
+                        <p>{{ element.description }}</p>
+                </div>
+        </a>
+        <div class="mosaic-overlay">
+            <img width="{{width}}px" src="{{ asset(element.photo) }}" />
+        </div>
+</div>
