@@ -9,3 +9,10 @@
 .settings/
 .idea/
 
+# vendors #
+###########
+vendor
+web/uploads
+web/bundles
+app/cache
+app/logs
