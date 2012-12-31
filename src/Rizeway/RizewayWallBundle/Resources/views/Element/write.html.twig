@@ -1,0 +1,49 @@
+<div id="add-post-panel-content">
+    <h1>Ecrire votre article :</h1>
+
+    <p>Vous ne disposez pas de blog personnel, vous pouvez écrire directement votre article sur le wall. Afin de constuire un mur de tous les participants au DZBlogDay, selectionner une photo pour illustrer votre article de préférence, une photo de vous. La taille de la photo est idéalement de 250px x 250px.</p>
+    
+    <form class="form" action="{{ path('wall_write') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_errors(form) }}
+
+        <fieldset>
+            <div class="field">
+                <div class="error">
+                    {{ form_errors(form.title) }}
+                </div>
+                {{ form_label(form.title, 'Titre') }}
+                {{ form_widget(form.title) }}
+            </div>
+
+            <div class="field">
+                <div class="error">
+                    {{ form_errors(form.description) }}
+                </div>
+                {{ form_label(form.description, 'Description') }}
+                {{ form_widget(form.description) }}
+            </div>
+
+            <div class="field">
+                <div class="error">
+                    {{ form_errors(form.photo) }}
+                </div>
+                {{ form_label(form.photo, 'Photo') }}
+                {{ form_widget(form.photo) }}
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div class="field">
+                <div class="error">
+                    {{ form_errors(form.email) }}
+                </div>
+                {{ form_label(form.email, 'Email') }}
+                {{ form_widget(form.email) }}
+            </div>
+        </fieldset>
+
+        {{ form_rest(form) }}
+
+        <button class="button" >Valider</button>
+    </form>
+</div>

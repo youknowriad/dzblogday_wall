@@ -14,8 +14,7 @@ Rizeway\RizewayWallBundle\Entity\Element:
       type: string
       length: 30
     description:
-      type: string
-      length: 255
+      type: text
     photo:
       type: string
       length: 150
@@ -23,5 +22,6 @@ Rizeway\RizewayWallBundle\Entity\Element:
     link:
       type: string
       length: 150
+      nullable: true
     approved:
       type: boolean

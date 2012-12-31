@@ -1,0 +1,13 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    
+    <div class="element_show">
+        <h1>{{ element.title }}</h1>
+        <div class="entry">
+            <img width="180px" style="float: left" src="{{ asset(element.photo) }}" />
+            {{ element.description }}
+        </div>
+    </div>
+
+{% endblock %}

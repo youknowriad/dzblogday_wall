@@ -36,7 +36,8 @@
             <div class="center">
                 <a href="{{ path('_welcome') }}"><img id="logo" src="{{ asset('images/logo.png') }}" alt="DZBlogDay : The Wall" /></a>
                 <a href="http://rizeway.com"><img id="byRizeway" src="{{ asset('images/rizeway.png') }}" alt="by rizeway" /></a>
-                <a id="add-post-link" href="{{ path('wall_add') }}"><img id="ruban" src="{{ asset('images/ruban.png') }}" alt="Proposer votre article" /></a>
+                <a id="write-post-link" href="{{ path('wall_write') }}"><img class="ruban" src="{{ asset('images/ruban.png') }}" alt="Ecrire votre article" /></a>
+                <a id="add-post-link" href="{{ path('wall_add') }}"><img class="ruban" src="{{ asset('images/ruban.png') }}" alt="Proposer votre article" /></a>
 
                 <div id="add-post-panel">
                     {% render 'RizewayWallBundle:Element:add' %}
@@ -47,6 +48,14 @@
                         $("a#add-post-link").fancybox({
                             'autoDimensions'    : false,
                             'width'             : 400,
+                            'height'            : 'auto'
+                        });
+                    });
+
+                    $(document).ready(function() {
+                        $("a#write-post-link").fancybox({
+                            'autoDimensions'    : false,
+                            'width'             : 550,
                             'height'            : 'auto'
                         });
                     });

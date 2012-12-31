@@ -1,5 +1,5 @@
 <div class="mosaic-block element" style="width: {{width}}px; height: {{width}}px;">
-        <a href="{{ element.link }}" target="_blank" class="mosaic-backdrop">
+        <a href="{{ element.link ? element.link : path('wall_show', {'id': element.id}) }}" target="_blank" class="mosaic-backdrop">
                 <div class="details">
                         <h4>{{ element.title }}</h4>
                         <p>{{ element.description }}</p>

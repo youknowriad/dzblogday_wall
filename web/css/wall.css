@@ -27,8 +27,9 @@ body {
     margin-top: 18px;
 }
 
-#ruban {
+.ruban {
     float: right;
+    margin-left: 20px;
 }
 
 #byRizeway {
@@ -332,4 +333,25 @@ a {
     text-shadow: none;
     line-height: 35px;
     color: #666;
+}
+
+/*- -------- Entry -------- */
+.element_show .entry {
+    text-align: justify;
+    line-height: 25px;
+}
+
+.element_show .entry img {
+    margin: 0 20px 20px 0;
+}
+
+.element_show .entry p {
+    margin-bottom: 20px;
+}
+
+.element_show .entry ul {
+    text-align: justify;
+    line-height: 25px;
+    list-style-position: inside;
+    list-style-image: square;
 }

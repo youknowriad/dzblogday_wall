@@ -8,3 +8,11 @@ wall_show:
 wall_add:
     pattern:  /wall/add
     defaults: { _controller: RizewayWallBundle:Element:add }
+
+wall_write:
+    pattern:  /wall/write
+    defaults: { _controller: RizewayWallBundle:Element:write }
+
+wall_show:
+    pattern:  /wall/show/{id}
+    defaults: { _controller: RizewayWallBundle:Element:show }

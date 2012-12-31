@@ -10,9 +10,13 @@ class ElementType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('title', 'text');
-        $builder->add('description', 'text');
         $builder->add('photo', 'file');
-        $builder->add('link', 'url');
+        if ($options['write']) {
+            $builder->add('description', 'textarea');
+        } else {
+            $builder->add('description', 'text');
+            $builder->add('link', 'url');
+        }
         $builder->add('email', 'email');
     }
 
@@ -25,6 +29,7 @@ class ElementType extends AbstractType
     {
         return array(
             'data_class' => 'Rizeway\RizewayWallBundle\Entity\Element',
+            'write'      => false,
         );
     }
 }
